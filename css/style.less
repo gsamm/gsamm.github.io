@@ -1,0 +1,112 @@
+html
+{
+	background: #eee;
+}
+
+body
+{
+}
+
+h1
+{
+	color: #4d4d4d;
+	font-family: 'Open Sans', Helvetica, Arial, Sans-Serif;
+	font-weight: 300;
+	text-align: center;
+
+	span
+	{
+		color: #aaa;
+		display: block;
+		font-size: 18px;
+		font-weight: 400;
+	}
+}
+
+.container
+{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	height: 320px;
+	margin: -160px auto 0 auto;
+	width: 100%;
+}
+
+ul
+{
+	list-style-type: none;
+	margin-top: 40px;
+	padding: 0;
+	text-align: center;
+
+	li
+	{
+		display: inline-block;
+		margin-right: 30px;
+
+		&:last-child
+		{
+			margin-right: 0;
+		}
+
+		a
+		{
+			color: #aaa;
+			font-size: 20px;
+			transition: color 1s;
+			text-decoration: none;
+
+			&.phone:hover
+			{
+				color: #6CE0F1;
+			}
+
+			&.envelope:hover
+			{
+				color: #FB4485;
+			}
+
+			&.file:hover
+			{
+				color: #FDA333;
+			}
+
+			&.twitter:hover
+			{
+				color: #C2E15F;
+			}
+
+			&.linkedin:hover
+			{
+				color: #6CE0F1;
+			}
+
+			&.github:hover
+			{
+				color: #FB4485;
+			}
+
+			.tooltip
+			{
+				color: #999;
+				display: block;
+				font-size: 14px;
+				font-family: 'Open Sans', Helvetica, Arial, Sans-Serif;
+				font-weight: 300;
+				opacity: 0;
+				text-align: center;
+				text-transform: uppercase;
+				transition: opacity 0.75s;
+			}
+
+			&:hover
+			{
+				.tooltip
+				{
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
