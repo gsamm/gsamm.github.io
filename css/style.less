@@ -3,10 +3,6 @@ html
 	background: #eee;
 }
 
-body
-{
-}
-
 h1
 {
 	color: #4d4d4d;
@@ -25,11 +21,11 @@ h1
 
 .container
 {
+	height: 320px;
+	left: 0;
+	margin: -160px auto 0 auto;
 	position: absolute;
 	top: 50%;
-	left: 0;
-	height: 320px;
-	margin: -160px auto 0 auto;
 	width: 100%;
 }
 
@@ -59,32 +55,32 @@ ul
 
 			&.phone:hover
 			{
-				color: #6CE0F1;
+				color: #6ce0f1;
 			}
 
-			&.envelope:hover
+			&.email:hover
 			{
-				color: #FB4485;
+				color: #fb4485;
 			}
 
 			&.file:hover
 			{
-				color: #FDA333;
-			}
-
-			&.twitter:hover
-			{
-				color: #C2E15F;
-			}
-
-			&.linkedin:hover
-			{
-				color: #6CE0F1;
+				color: #fda333;
 			}
 
 			&.github:hover
 			{
-				color: #FB4485;
+				color: #c2e15f;
+			}
+
+			&.linkedin:hover
+			{
+				color: #6ce0f1;
+			}
+
+			&.twitter:hover
+			{
+				color: #fb4485;
 			}
 
 			.tooltip
@@ -104,6 +100,95 @@ ul
 			{
 				.tooltip
 				{
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 575px)
+{
+	.container
+	{
+		margin: 0;
+		// padding-top: 30px;
+		position: static;
+	}
+
+	h1
+	{
+		border-left: 5px solid #999;
+		margin: 0;
+		padding: 30px 0 30px 25px;
+		text-align: left;
+	}
+
+	ul
+	{
+		margin: 0;
+		text-align: left;
+
+		li
+		{
+			display: block;
+			// margin: 0 0 15px 0;
+			margin: 0;
+
+			a
+			{
+				border-left: 5px solid;
+				display: block;
+				padding: 5px 0 5px 25px;
+				transition: none;
+
+				&.phone
+				{
+					border-color: #6ce0f1;
+					color: #6ce0f1;
+					// background-color: #6ce0f1;
+				}
+
+				&.email
+				{
+					border-color: #fb4485;
+					color: #fb4485;
+					// background-color: #fb4485;
+				}
+
+				&.file
+				{
+					border-color: #fda333;
+					color: #fda333;
+					// background-color: #fda333;
+				}
+
+				&.github
+				{
+					border-color: #c2e15f;
+					color: #c2e15f;
+					// background-color: #c2e15f;
+				}
+
+				&.linkedin
+				{
+					border-color: #6ce0f1;
+					color: #6ce0f1;
+					// background-color: #6ce0f1;
+				}
+
+				&.twitter
+				{
+					border-color: #fb4485;
+					color: #fb4485;
+					// background-color: #fb4485;
+				}
+
+				.tooltip
+				{
+					display: inline-block;
+					font-weight: 400;
+					margin-left: 5px;
 					opacity: 1;
 				}
 			}
