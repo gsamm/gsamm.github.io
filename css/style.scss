@@ -9,7 +9,8 @@ $githubColour: #555;
 html
 {
 	height: 100%;
-	background: #eee radial-gradient(circle farthest-side #fff 25%, #ddd 75%);
+	background-color: #eee;
+	background-image: radial-gradient(circle, #fff 25%, #ddd 75%);
 }
 
 h1
@@ -30,10 +31,11 @@ h1
 
 .container
 {
-	left: 50%;
+	height: 230px;
+	margin-top: -115px;
 	position: absolute;
 	top: 50%;
-	transform: translateX(-50%) translateY(-50%);
+	width: 100%;
 }
 
 ul
@@ -92,10 +94,10 @@ ul
 				font-size: 14px;
 				font-family: 'Open Sans', Helvetica, Arial, Sans-Serif;
 				font-weight: 400;
-				opacity: 0.75;
+				opacity: 0.6;
 				padding-top: 10px;
 				text-transform: uppercase;
-				transition: text-decoration 0.3s;
+				transition: opacity 0.3s;
 			}
 
 			&:hover
@@ -118,15 +120,15 @@ ul
 {
 	html
 	{
-		background-image: none;
 		background-color: $githubColour;
+		background-image: none;
 	}
 
 	.container
 	{
 		background-color: #fff;
+		margin-top: 0;
 		position: static;
-		transform: none;
 	}
 
 	h1
