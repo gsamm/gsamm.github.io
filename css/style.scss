@@ -1,52 +1,52 @@
-@phoneColour: #c2e15f;
-@emailColour: #fb4485;
-@fileColour: #fda333;
-@githubColour: #555;
-@linkedinColour: #4875B4;
-@twitterColour: #55acee;
+$phoneColour: #9DE0AD;
+$emailColour: #45ADA8;
+$fileColour: #547980;
+$githubColour: #555;
+
+::-moz-selection { color: #fff; background-color: $phoneColour; }
+::selection { color: #fff; background-color: $phoneColour; }
 
 html
 {
-	background: #eee;
+	height: 100%;
+	background: #eee radial-gradient(circle farthest-side #fff 25%, #ddd 75%);
 }
 
 h1
 {
 	color: #4d4d4d;
 	font-family: 'Open Sans', Helvetica, Arial, Sans-Serif;
+	font-size: 48px;
 	font-weight: 300;
+	margin-bottom: 50px;
 	text-align: center;
 
 	span
 	{
-		color: #aaa;
-		display: block;
-		font-size: 18px;
-		font-weight: 400;
+		color: #fff;
+		background-color: $emailColour;
 	}
 }
 
 .container
 {
-	height: 320px;
-	left: 0;
-	margin: -160px auto 0 auto;
+	left: 50%;
 	position: absolute;
 	top: 50%;
-	width: 100%;
+	transform: translateX(-50%) translateY(-50%);
 }
 
 ul
 {
 	list-style-type: none;
-	margin-top: 40px;
+	margin: 0;
 	padding: 0;
 	text-align: center;
 
 	li
 	{
 		display: inline-block;
-		margin-right: 30px;
+		margin-right: 50px;
 
 		&:last-child
 		{
@@ -60,34 +60,29 @@ ul
 			transition: color 1s;
 			text-decoration: none;
 
+			i
+			{
+				transition: transform 0.3s;
+			}
+
 			&.phone:hover
 			{
-				color: @phoneColour;
+				color: $phoneColour;
 			}
 
 			&.email:hover
 			{
-				color: @emailColour;
+				color: $emailColour;
 			}
 
 			&.file:hover
 			{
-				color: @fileColour;
+				color: $fileColour;
 			}
 
 			&.github:hover
 			{
-				color: @githubColour;
-			}
-
-			&.linkedin:hover
-			{
-				color: @linkedinColour;
-			}
-
-			&.twitter:hover
-			{
-				color: @twitterColour;
+				color: $githubColour;
 			}
 
 			.tooltip
@@ -96,15 +91,20 @@ ul
 				display: block;
 				font-size: 14px;
 				font-family: 'Open Sans', Helvetica, Arial, Sans-Serif;
-				font-weight: 300;
-				opacity: 0;
-				text-align: center;
+				font-weight: 400;
+				opacity: 0.75;
+				padding-top: 10px;
 				text-transform: uppercase;
-				transition: opacity 0.75s;
+				transition: text-decoration 0.3s;
 			}
 
 			&:hover
 			{
+				i
+				{
+					transform: scale(1.3);
+				}
+
 				.tooltip
 				{
 					opacity: 1;
@@ -116,19 +116,30 @@ ul
 
 @media (max-width: 575px)
 {
+	html
+	{
+		background-image: none;
+		background-color: $githubColour;
+	}
+
 	.container
 	{
-		margin: 0;
-		// padding-top: 30px;
+		background-color: #fff;
 		position: static;
+		transform: none;
 	}
 
 	h1
 	{
-		border-left: 5px solid #999;
 		margin: 0;
 		padding: 30px 0 30px 25px;
 		text-align: left;
+
+		span
+		{
+			color: inherit;
+			background-color: inherit;
+		}
 	}
 
 	ul
@@ -139,54 +150,41 @@ ul
 		li
 		{
 			display: block;
-			// margin: 0 0 15px 0;
 			margin: 0;
 
 			a
 			{
-				border-left: 5px solid;
 				display: block;
 				padding: 5px 0 5px 25px;
 				transition: none;
 
 				&.phone
 				{
-					border-color: @phoneColour;
-					color: @phoneColour;
+					background-color: $phoneColour;
+					color: $phoneColour;
 				}
 
 				&.email
 				{
-					border-color: @emailColour;
-					color: @emailColour;
+					background-color: $emailColour;
+					color: $emailColour;
 				}
 
 				&.file
 				{
-					border-color: @fileColour;
-					color: @fileColour;
+					background-color: $fileColour;
+					color: $fileColour;
 				}
 
 				&.github
 				{
-					border-color: @githubColour;
-					color: @githubColour;
-				}
-
-				&.linkedin
-				{
-					border-color: @linkedinColour;
-					color: @linkedinColour;
-				}
-
-				&.twitter
-				{
-					border-color: @twitterColour;
-					color: @twitterColour;
+					background-color: $githubColour;
+					color: $githubColour;
 				}
 
 				.tooltip
 				{
+					color: #fff;
 					display: inline-block;
 					font-weight: 400;
 					margin-left: 5px;
